@@ -27,7 +27,7 @@ TLE::TLE(char *line1, char *line2)
 void TLE::parseLines(char *line1, char *line2)
 {
     int i=0;
-    this->rec.whichconst=wgs72;
+    this->rec.whichconst=wgs84;
     // copy the lines
     strncpy(this->line1,line1,69);
     strncpy(this->line2,line2,69);
