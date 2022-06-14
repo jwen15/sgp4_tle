@@ -128,7 +128,6 @@ long parseEpoch(ElsetRec *rec, char *str)
     strncpy(&tmp2[1],&tmp[5],9);
     tmp2[11]=0;
     double dfrac = strtod(tmp2,NULL);
-    double odfrac = dfrac;        
     rec->epochdays = doy;
     rec->epochdays += dfrac;
         
