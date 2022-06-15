@@ -7,9 +7,6 @@
 typedef struct VERIN {
     char line1[70];
     char line2[70];
-    double startmin;
-    double stepmin;
-    double stopmin;
 } VERIN;
 
 /**
@@ -18,7 +15,6 @@ typedef struct VERIN {
 int readVERINs(VERIN **listptr)
 {
     char line[256];
-    char *str = NULL;
     FILE *in_file = NULL;
     VERIN *verins = NULL;
     int cnt = 0;
@@ -51,8 +47,6 @@ int readVERINs(VERIN **listptr)
             fgets(line,255,in_file);
             strncpy(verins[cnt].line2,line,69);
             verins[cnt].line2[69]=0;
-            str = &line[70];
-            sscanf(str,"%lf %lf %lf",&verins[cnt].startmin,&verins[cnt].stopmin,&verins[cnt].stepmin);
             cnt++;
         }
     }
