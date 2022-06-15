@@ -24,6 +24,10 @@ class TLE
     double n;
     int revnum;
     int sgp4Error;
+    unsigned short int prn;
+    enum System {
+      GPS, Beidou, Galileo, GLONASS, QZSS, IRNSS
+    } system;
 
 
   public:
