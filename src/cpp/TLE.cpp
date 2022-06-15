@@ -46,6 +46,7 @@ void TLE::parseLines(char *line1, char *line2)
 
     //this->objectNum = (int)gd(line1,2,7);
     strncpy(this->objectID,&line1[2],5);
+    this->objectID[5]=0;
 
     this->ndot = gdi(line1,35,44);
     if(line1[33]=='-') this->ndot *= -1.0;
